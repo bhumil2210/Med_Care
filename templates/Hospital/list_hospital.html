@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static from staticfiles %}
+	<title>Alloctaion Of Bed</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list_hospital.css'%}">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+<!-- this is for getting icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<!-- these two are for dropdown -->
+<script type="text/javascript" src="https://unpkg.com/popper.js"></script>
+<script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<!-- these two are required to link to bootstap js and jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><i class="fas fa-medkit"></i> ALL IN ONE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="container"> -->
+  <form method="GET" class="form-inline">
+    <input class="form-control" name="filter" type="search" placeholder="Search the name of the hospital" style="width: 950px">
+    <div class="dropdown">
+  <button name="filter_by" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-filter"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#"><i class="fas fa-hospital-symbol"></i> Name</a>
+    <a class="dropdown-item" href="#"><i class="fas fa-bed"></i> Availability Of Bed</a>
+      <a  class="dropdown-item" href="#"><i class="fas fa-map-marker"></i> Location</a>
+  </div>
+	</div>
+	<div class="table" style="margin-left: 20%">
+		<div class="row" id="heading">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"><strong><i class="fas fa-hospital-symbol"></i> NAME</strong></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"><strong><i class="fas fa-bed"></i> BEDS AVAILABLE</strong></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"><strong><i class="fas fa-map-marker"></i> LOCATION</strong></div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"><strong><i class="fas fa-map-marker"></i>Appointment</strong></div>
+		</div>
+        {% for query in query_set %}
+		<div class="row">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">{{query.name}}</div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">{{query.type1}}</div>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">{{query.type2}}</div>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">{{query.type3}}</div>
+				</div>
+			</div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">{{query.city}},{{query.state}}</div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"><a href="{% url 'Hospital:appointment' query.name %}">Appointment</a></div>
+		</div>
+        {% endfor %}
+	</div>
+  </form>
+<!-- </div> -->
+</body>
+</html>

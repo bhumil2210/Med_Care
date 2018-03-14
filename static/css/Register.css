@@ -1,0 +1,13 @@
+.jumbotron{
+	width: 90%;
+	margin: 100px 70px;
+	height: 500px;
+}
+.dropdown{
+	margin-left: 100px;
+	margin-top: 50px;
+}
+h1{
+	color: black;
+	margin-top: 50px;
+}

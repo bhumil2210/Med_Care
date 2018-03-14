@@ -1,0 +1,14 @@
+.jumbotron{
+	width: 500px;
+	height: 500px;
+	border: 1px solid grey;
+	margin: 100px auto;
+}
+.btn{
+	margin: 20px 170px;
+	width: 100px;
+}
+#signup{
+	margin: 10px 130px;
+	width: 180px;
+}

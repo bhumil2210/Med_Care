@@ -1,0 +1,18 @@
+.form-inline{
+	margin-top: 80px;
+	margin-left: 15%;
+}
+.table{
+	margin-top: 40px;
+	width: 90%;
+/*	margin-left: 60px;*/
+}
+.col-xl-4{
+	border: 2px solid #d4d2d2;
+}
+
+.head{
+	font-size: 42px;
+	font-family: 'Arbutus Slab';
+
+}

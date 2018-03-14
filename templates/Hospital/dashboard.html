@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static from staticfiles %}
+    <meta content="text/html;charset=utf-8" http-equiv="Content-type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>USER'S PAGE</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+<!-- this is for getting icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<!-- these two are for dropdown -->
+<script type="text/javascript" src="https://unpkg.com/popper.js"></script>
+<script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<!-- these two are required to link to bootstap js and jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><i class="fas fa-medkit"></i> ALL IN ONE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+  	<li class="nav-item active">
+        <a class="nav-link" href="#" style="color: #316296" id="show">LOGOUT</a>
+      </li>
+  </ul>
+</nav>
+<h1>User's Page</h1>
+<hr>
+<div class="jumbotron">
+	<form method="get">
+		<label>Pick An Operation</label>
+		<br>
+		<button type="button" class="btn btn-outline-secondary"> <i class="fas fa-pills"></i> Order Medicine</button>
+		<br>
+        <button type="button" onclick="window.location.href='{% url 'Hospital:list_hospital'%}'" class="btn btn-outline-secondary"> <i class="fas fa-bed"></i>Check Availability of bed</button>
+		<br>
+		<button type="button" class="btn btn-outline-secondary"> <i class="fas fa-user-md"></i> Pick An Appointment</button>
+		<br>
+		<button type="button" class="btn btn-outline-secondary"> <i class="fas fa-sort-numeric-down"></i> Check the Token Number</button>
+	</form>
+</div>
+</body>
+</html>
