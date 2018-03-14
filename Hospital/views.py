@@ -1,10 +1,10 @@
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate,login as auth,logout
+from django.contrib.auth import authenticate, login as auth,logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from .models import Hospital,Doctors,Timing
+from .models import Hospital, Records
 # Create your views here.
 import pyrebase
 
@@ -57,8 +57,65 @@ def list_hospital(request):
 
 
 @csrf_exempt
-def excel(request):
-    return render(request, "Hospital/list_hospital.html")
+def excel(request, string):
+    h = Hospital.objects.get(name=string)
+    record = h.records_set.all()
+    for i in range(10):
+        patient_name = request.POST.get('patient_name' + str(i))
+        contact = request.POST.get('contact_no' + str(i))
+        addr = request.POST.get('addr' + str(i))
+        doctor = request.POST.get('doctor_name' + str(i))
+        token = request.POST.get('token_no' + str(i))
+        checked_out = request.POST.get('checked_out' + str(i))
+        type1 = request.POST.get('type1' + str(i))
+        type2 = request.POST.get('type2' + str(i))
+        type3 = request.POST.get('type3' + str(i))
+        rc = Records.objects.filter(patient_name=patient_name)
+        print(rc)
+        if rc is not None:
+            for r in rc:
+                r.token = token
+                r.is_checked_out = checked_out
+                r.type1 = type1
+                r.type2 = type2
+                r.type3 = type3
+                r.save()
+        if rc.count()==0:
+            print("hello")
+            m = Records.objects.create(
+                hospital=h,
+                patient_name=patient_name,
+                contact_no=contact,
+                Address=addr,
+                Doctor_attending=doctor,
+                Appointment_no=token,
+                is_checked_out=checked_out,
+                type1=type1,
+                type2=type2,
+                type3=type3)
+            m.save()
+            calculate_beds(request,h)
+            calculate_app_no(request,h)
+    return render(request, "Hospital/excel.html", {'records': record})
+
+
+def calculate_app_no(request , h):
+    doctors = h.doctor_set.all()
+    for doctor in doctors:
+        app_no = Records.objects.filter(name=doctor).latest()
+        doctor.app_no = app_no
+
+
+@csrf_exempt
+def calculate_beds(request, h):
+    bed1 = Records.objects.filter(type1='Y').count()
+    bed2 = Records.objects.filter(type2='Y').count()
+    bed3 = Records.objects.filter(type3='Y').count()
+    h.no_of_beds_available = h.total_beds - int(bed1) - int(bed2) - int(bed3)
+    h.type1 = bed1
+    h.type2 = bed2
+    h.type3 = bed3
+    h.save()
 
 
 @csrf_exempt
