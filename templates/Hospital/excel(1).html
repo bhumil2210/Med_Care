@@ -1,0 +1,193 @@
+SPECIALIST<html>
+<head>
+    {% load static from staticfiles %}
+	<title>excel sheet</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/excel(1).css' %}">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><i class="fas fa-medkit"></i> ALL IN ONE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<h1 style="margin-top: 70px"><strong>UPLOAD THE DATA HERE</strong></h1>
+
+<div class="container"style="margin-right: 20px">
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">PATIENT'S NAME</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">CONTACT NUMBER</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">ADDRESS</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">DOCTOR'S NAME</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">SPECIALIST</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE1</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE2</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE3</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">CURRENT TOKEN NUMBER</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">LAST TOKEN NUMBER</div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type10" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type20"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type30"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out0"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type11" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type21"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type31"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out1"></div>
+</div>
+
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type12" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type22"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type32"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out2"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type13" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type23"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type33"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out3"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name4"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type14" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type24"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type34"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no4"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out4"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type15" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type25"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type35"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out5"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type16" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type26"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type36"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out6"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type17" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type27"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type37"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out7"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name8"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type18" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type28"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type38"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no8"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out8"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name9"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type19" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type29"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type39"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no9"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out9"></div>
+</div>
+
+</div>    
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

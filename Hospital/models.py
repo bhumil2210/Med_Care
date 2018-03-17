@@ -27,7 +27,7 @@ class Doctors(models.Model):
     Hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     Speciality = models.CharField(max_length=250)
-    app_no = models.CharField(max_length=250)
+    app_no = models.CharField(max_length=250, default=0)
 
 
 class Records(models.Model):
@@ -36,8 +36,8 @@ class Records(models.Model):
     contact_no = models.IntegerField()
     Address = models.CharField(max_length=250)
     Doctor_attending = models.CharField(max_length=250)
-    Appointment_no = models.CharField(max_length=250)
+    Appointment_no = models.CharField(max_length=250, default=0)
     is_checked_out = models.CharField(max_length=10)
-    type1 = models.CharField(max_length=10)
-    type2 = models.CharField(max_length=10)
-    type3 = models.CharField(max_length=10)
+    type1 = models.CharField(max_length=10, default='N')
+    type2 = models.CharField(max_length=10, default='N')
+    type3 = models.CharField(max_length=10, default='N')

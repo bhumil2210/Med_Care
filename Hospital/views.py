@@ -74,52 +74,50 @@ def excel(request, string):
         print(rc)
         if rc is not None:
             for r in rc:
-                r.token = token
+                r.Doctor_attending = doctor
+                r.Appointment_no = token
                 r.is_checked_out = checked_out
                 r.type1 = type1
                 r.type2 = type2
                 r.type3 = type3
                 r.save()
-        if rc.count()==0:
-            print("hello")
-            m = Records.objects.create(
-                hospital=h,
-                patient_name=patient_name,
-                contact_no=contact,
-                Address=addr,
-                Doctor_attending=doctor,
-                Appointment_no=token,
-                is_checked_out=checked_out,
-                type1=type1,
-                type2=type2,
-                type3=type3)
-            m.save()
-            calculate_beds(request,h)
-            calculate_app_no(request,h)
-    return render(request, "Hospital/excel.html", {'records': record})
+
+        calculate_beds(request, h)
+        calculate_app_no(request, h)
+    return render(request, "Hospital/excel(1).html", {'records': record})
 
 
-def calculate_app_no(request , h):
-    doctors = h.doctor_set.all()
+def create():
+    print("hello")
+
+
+def calculate_app_no(request, h):
+    doctors = h.doctors_set.all()
     for doctor in doctors:
-        app_no = Records.objects.filter(name=doctor).latest()
-        doctor.app_no = app_no
+        if doctor:
+            r = Records.objects.filter(Doctor_attending=doctor.name)
+            s = r.last()
+            doctor.app_no = s.Appointment_no
+            doctor.save()
+        else:
+            pass
 
 
 @csrf_exempt
 def calculate_beds(request, h):
-    bed1 = Records.objects.filter(type1='Y').count()
-    bed2 = Records.objects.filter(type2='Y').count()
-    bed3 = Records.objects.filter(type3='Y').count()
-    h.no_of_beds_available = h.total_beds - int(bed1) - int(bed2) - int(bed3)
-    h.type1 = bed1
-    h.type2 = bed2
-    h.type3 = bed3
+    bed1 = Records.objects.filter(type1='Y',hospital=h).count()
+    bed2 = Records.objects.filter(type2='Y',hospital=h).count()
+    bed3 = Records.objects.filter(type3='Y',hospital=h).count()
+    h.no_of_beds_available = int(int(h.total_beds) - int(bed1) - int(bed2) - int(bed3))
+    h.type1 = int(bed1)
+    h.type2 = int(bed2)
+    h.type3 = int(bed3)
     h.save()
 
 
 @csrf_exempt
 def register(request):
+    h_name = ""
     if request.POST:
         name = request.POST['name']
         Address1 = request.POST['Address1']
@@ -135,7 +133,9 @@ def register(request):
             state=state,
             zip_code=zip)
         lt.save()
-    return render(request, "Hospital/Register.html")
+        global h_name
+        h_name = name
+    return render(request, "Hospital/Register.html", {'h_name': h_name})
 
 
 @csrf_exempt
