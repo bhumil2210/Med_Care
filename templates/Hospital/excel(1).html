@@ -30,7 +30,7 @@ SPECIALIST<html>
 
 <h1 style="margin-top: 70px"><strong>UPLOAD THE DATA HERE</strong></h1>
 
-<div class="container"style="margin-right: 20px">
+<div class="container"style="margin-right: 10px">
 <div class="row">
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">PATIENT'S NAME</div>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">CONTACT NUMBER</div>
@@ -40,148 +40,183 @@ SPECIALIST<html>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE1</div>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE2</div>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">BED TYPE3</div>
+</div>
+
+<form method="post">
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.patient_name}}" type="text" name="patient_name0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.contact_no}}" type="text" name="contact_no0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.Address}}" type="text" name="addr0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.Doctor_attending}}" type="text" name="doctor_name0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.speciality}}" type="text" name="specialist0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.type1}}" type="text" placeholder="Y/N" name="type10" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.type2}}" type="text" placeholder="Y/N" name="type20"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.0.type3}}" type="text" placeholder="Y/N" name="type30"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.patient_name}}" type="text" name="patient_name1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.contact_no}}"type="text" name="contact_no1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.Address}}" type="text" name="addr1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.Doctor_attending}}" type="text" name="doctor_name1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.speciality}}" type="text" name="specialist1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.type1}}" type="text" placeholder="Y/N" name="type11" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.type1}}"type="text" placeholder="Y/N" name="type21"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.1.type1}}"type="text" placeholder="Y/N" name="type31"></div>
+</div>
+
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.patient_name}}" type="text" name="patient_name2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.contact_no}}"type="text" name="contact_no2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.Address}}" type="text" name="addr2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.Doctor_attending}}" type="text" name="doctor_name2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.speciality}}"type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.type1}}" type="text" placeholder="Y/N" name="type12" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.type1}}"type="text" placeholder="Y/N" name="type22"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.2.type1}}"type="text" placeholder="Y/N" name="type32"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.patient_name}}" type="text" name="patient_name3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.contact_no}}"type="text" name="contact_no3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.Address}}" type="text" name="addr3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.Doctor_attending}}" type="text" name="doctor_name3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.speciality}}"type="text" name="specialist3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.type1}}" type="text" placeholder="Y/N" name="type13" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.type1}}"type="text" placeholder="Y/N" name="type23"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.3.type1}}"type="text" placeholder="Y/N" name="type33"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.patient_name}}" type="text" name="patient_name4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.contact_no}}"type="text" name="contact_no4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.Address}}" type="text" name="addr4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.Doctor_attending}}" type="text" name="doctor_name4"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.speciality}}"type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.type1}}" type="text" placeholder="Y/N" name="type14" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.type1}}"type="text" placeholder="Y/N" name="type24"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.4.type1}}"type="text" placeholder="Y/N" name="type34"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.patient_name}}" type="text" name="patient_name5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.contact_no}}"type="text" name="contact_no5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.Address}}" type="text" name="addr5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.Doctor_attending}}" type="text" name="doctor_name5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.speciality}}"type="text" name="specialist5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.type1}}" type="text" placeholder="Y/N" name="type15" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.type1}}"type="text" placeholder="Y/N" name="type25"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.5.type1}}"type="text" placeholder="Y/N" name="type35"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.patient_name}}" type="text" name="patient_name6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.contact_no}}"type="text" name="contact_no6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.Address}}" type="text" name="addr6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.Doctor_attending}}" type="text" name="doctor_name6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.speciality}}"type="text" name="specialist6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.type1}}" type="text" placeholder="Y/N" name="type16" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.type1}}"type="text" placeholder="Y/N" name="type26"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.6.type1}}"type="text" placeholder="Y/N" name="type36"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.patient_name}}" type="text" name="patient_name7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.contact_no}}"type="text" name="contact_no7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.Address}}" type="text" name="addr7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.Doctor_attending}}" type="text" name="doctor_name7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.speciality}}"type="text" name="specialist7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.type1}}" type="text" placeholder="Y/N" name="type17" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.type1}}"type="text" placeholder="Y/N" name="type27"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.7.type1}}"type="text" placeholder="Y/N" name="type37"></div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.patient_name}}" type="text" name="patient_name8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.contact_no}}"type="text" name="contact_no8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.Address}}" type="text" name="addr8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.Doctor_attending}}" type="text" name="doctor_name8"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.speciality}}"type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.type1}}" type="text" placeholder="Y/N" name="type18" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.type1}}" type="text" placeholder="Y/N" name="type28"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.8.type1}}"type="text" placeholder="Y/N" name="type38"></div>
+</div>
+
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.patient_name}}" type="text" name="patient_name9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.contact_no}}"type="text" name="contact_no9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.Address}}" type="text" name="addr9" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.Doctor_attending}}" type="text" name="doctor_name9"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.speciality}}"type="text" name="specialist2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.type1}}" type="text" placeholder="Y/N" name="type19" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.type1}}" type="text" placeholder="Y/N" name="type29"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{records.9.type1}}" type="text" placeholder="Y/N" name="type39"></div>
+</div>
+<button name="btn1" onclick="window.location.href='{% url 'Hospital:excel' h %}'" type="submit" class="btn btn-outline-secondary" style="margin-left: 300px" id="btnn">Secondary</button>
+    <h1 style="margin-top: 40px" id="style">UPLOAD DOCTOR'S DATA FOR CONSULTATION</h1>
+<div class="container"style="margin-right: -95px">
+<div class="row">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">DOCTOR'S NAME</div>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">CURRENT TOKEN NUMBER</div>
 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">LAST TOKEN NUMBER</div>
 </div>
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name0" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no0" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr0" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name0"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist0"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type10" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type20"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type30"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no0"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out0"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.0.name}}" type="text" name="name0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.0.current_app_no}}" type="NUMBER" name="current0" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.0.assigned_app_no}}" type="NUMBER" name="last0" ></div>
 </div>
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name1" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no1" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr1" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name1"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist1"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type11" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type21"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type31"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no1"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out1"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.1.name}}" type="text" name="name1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.1.current_app_no}}" type="NUMBER" name="current1" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.1.assigned_app_no}}"type="NUMBER" name="last1" ></div>
 </div>
-
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name2" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no2" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr2" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type12" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type22"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type32"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out2"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.2.name}}" type="text" name="name2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.2.current_app_no}}" type="NUMBER" name="current2" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.2.assigned_app_no}}"type="NUMBER" name="last2" ></div>
 </div>
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name3" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no3" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr3" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name3"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist3"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type13" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type23"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type33"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no3"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out3"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.3.name}}" type="text" name="name3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.3.current_app_no}}" type="NUMBER" name="current3" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.3.assigned_app_no}}"type="NUMBER" name="last3" ></div>
 </div>
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name4" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no4" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr4" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name4"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type14" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type24"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type34"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no4"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out4"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.4.name}}" type="text" name="name4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.4.current_app_no}}" type="NUMBER" name="current4" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.4.assigned_app_no}}"type="NUMBER" name="last4" ></div>
 </div>
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name5" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no5" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr5" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name5"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist5"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type15" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type25"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type35"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no5"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out5"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.5.name}}" type="text" name="name5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.5.current_app_no}}" type="NUMBER" name="current5" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.5.assigned_app_no}}"type="NUMBER" name="last5" ></div>
 </div>
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name6" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no6" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr6" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name6"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist6"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type16" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type26"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type36"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no6"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out6"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.6.name}}" type="text" name="name6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.6.current_app_no}}" type="NUMBER" name="current6" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.6.assigned_app_no}}"type="NUMBER" name="last6" ></div>
 </div>
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name7" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no7" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr7" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name7"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist7"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type17" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type27"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type37"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no7"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out7"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.7.name}}" type="text" name="name7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.7.current_app_no}}" type="NUMBER" name="current7" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.7.assigned_app_no}}"type="NUMBER" name="last7" ></div>
 </div>
-
-
 <div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name8" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no8" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr8" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name8"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type18" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type28"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type38"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no8"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out8"></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.8.name}}" type="text" name="name8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.8.current_app_no}}" type="NUMBER" name="current8" ></div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input value="{{doctor.8.assigned_app_no}}"type="NUMBER" name="last8" ></div>
 </div>
+<button name="btn2" type="submit" class="btn btn-outline-secondary" style="margin-left: 70px" id="btn">Secondary</button>
 
-<div class="row">
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="patient_name9" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="contact_no9" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="addr9" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="doctor_name9"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="specialist2"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type19" ></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type29"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" placeholder="Y/N" name="type39"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="token_no9"></div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" style="padding: 0px"><input type="text" name="checked_out9"></div>
+
 </div>
-
-</div>    
+</form>
+</div>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 <script
   src="http://code.jquery.com/jquery-3.3.1.js"

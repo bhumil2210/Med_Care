@@ -26,18 +26,24 @@ class Hospital(models.Model):
 class Doctors(models.Model):
     Hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
-    Speciality = models.CharField(max_length=250)
-    app_no = models.CharField(max_length=250, default=0)
+    Speciality = models.CharField(max_length=250,default=0, blank=True, null=True)
+    current_app_no = models.CharField(max_length=250, default=0)
+    assigned_app_no = models.CharField(max_length=250,default=0)
+
+
+class Medicine(models.Model):
+    name = models.CharField(max_length=250)
+    price = models.CharField(max_length=250)
+    location = models.CharField(max_length=250)
 
 
 class Records(models.Model):
-    hospital = models.ForeignKey(Hospital,on_delete=models.CASCADE)
-    patient_name = models.CharField(max_length=250)
-    contact_no = models.IntegerField()
-    Address = models.CharField(max_length=250)
-    Doctor_attending = models.CharField(max_length=250)
-    Appointment_no = models.CharField(max_length=250, default=0)
-    is_checked_out = models.CharField(max_length=10)
-    type1 = models.CharField(max_length=10, default='N')
-    type2 = models.CharField(max_length=10, default='N')
-    type3 = models.CharField(max_length=10, default='N')
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE)
+    patient_name = models.CharField(max_length=250,null=True,blank=True)
+    contact_no = models.CharField(default=0, max_length=10,blank=True, null=True)
+    Address = models.CharField(max_length=250, default=0, blank=True, null=True)
+    Doctor_attending = models.CharField(max_length=250, default=0, blank=True, null=True)
+    speciality = models.CharField(max_length=250, default=0, null=True, blank=True)
+    type1 = models.CharField(max_length=10, default='N',blank=True,null=True)
+    type2 = models.CharField(max_length=10, default='N',blank=True,null=True)
+    type3 = models.CharField(max_length=10, default='N',blank=True,null=True)

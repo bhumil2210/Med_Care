@@ -1,0 +1,25 @@
+.form-inline{
+	margin-top: 100px;
+	margin-left: 80px;
+}
+/*.form-control{
+	margin-right: -10px;
+}*/
+#dropdownMenuButton{
+	margin-left: 30px;
+	float: left;
+}
+.table{
+	margin-top: 40px;
+	width: 90%;
+/*	margin-left: 60px;*/
+}
+.col-xl-4{
+	border: 2px solid #d4d2d2;
+	height: 45px;
+}
+#heading{
+	font-size: 35px;
+	font-family: 'Arbutus Slab';
+	color: #5c5f61;
+}

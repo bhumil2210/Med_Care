@@ -51,7 +51,7 @@
 	<form method="get">
 		<label>Pick An Operation</label>
 		<br>
-		<button type="button" class="btn btn-outline-secondary"> <i class="fas fa-pills"></i> Order Medicine</button>
+		<button type="button" onclick="window.location.href='{% url 'Hospital:order'%}'" class="btn btn-outline-secondary"> <i class="fas fa-pills"></i> Order Medicine</button>
 		<br>
         <button type="button" onclick="window.location.href='{% url 'Hospital:list_hospital'%}'" class="btn btn-outline-secondary"> <i class="fas fa-bed"></i>Check Availability of bed</button>
 		<br>

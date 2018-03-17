@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>symptons</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="sympton.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><i class="fas fa-medkit"></i> ALL IN ONE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron">
+<form method="post" class="container">
+	<h1><strong>ESTIMATE YOUR HEALTH</strong></h1>
+<input type="number" name="age" placeholder="AGE">
+<input type="text" name="gender" placeholder="GENDER: M/F/T" id="gender"><br>
+    <button name="btn" type="submit"></button>
+<label>ENTER YOUR SYMPTONS HERE</label>
+<input type="text" name="symptons"  id="size"><br>
+<input type="text" name="question1" placeholder="Question 1" class="que">{% if text %}{{text}}{%endif%}<br>
+<button name="present1" type="button" class="btn btn-outline-secondary">PRESENT</button>
+<button type="button" class="btn btn-outline-secondary">ABSENT</button>
+<button type="button" class="btn btn-outline-secondary">UNKNOWN</button>
+<br>
+<input type="text" name="question2" placeholder="Question 2" class="que"><br>
+<button name="present2" type="button" class="btn btn-outline-secondary">PRESENT</button>
+<button type="button" class="btn btn-outline-secondary">ABSENT</button>
+<button type="button" class="btn btn-outline-secondary">UNKNOWN</button>
+<br>
+<input type="text" name="question3" placeholder="Question 3" class="que"><br>
+<button name="present3" type="button" class="btn btn-outline-secondary">PRESENT</button>
+<button type="button" class="btn btn-outline-secondary">ABSENT</button>
+<button type="button" class="btn btn-outline-secondary">UNKNOWN</button>
+<br>
+<input type="text" name="result" placeholder="RESULTS">
+</form>
+</div>
+</body>
+</html>
