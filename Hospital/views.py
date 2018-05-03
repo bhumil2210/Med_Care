@@ -13,12 +13,13 @@ import infermedica_api
 import json
 
 config = {
-    "apiKey": "AIzaSyDHI0IQj0PsLk-xUSOpHGSJvUUT0rgzsas",
-    "authDomain": "medcare-4ade6.firebaseapp.com",
-    "databaseURL": "https://medcare-4ade6.firebaseio.com",
-    "projectId": "medcare-4ade6",
+    # firebase web credentials
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
     "storageBucket": "",
-    "messagingSenderId": "208246513043"
+    "messagingSenderId": ""
   }
 firebase = pyrebase.initialize_app(config)
 
@@ -187,7 +188,7 @@ def symp_checker(request):
         gender = request.POST.get("gender")
         symptons = request.POST.get("symptons")
         print(symptons)
-        api = infermedica_api.API(app_id='5e56236e', app_key='ab1d0c08bf4a8d96e23eb00918f211cb')
+        api = infermedica_api.API(app_id='<api_id>', app_key='<api_key>')
         r = api.parse(symptons)
         j = json.loads(str(r))
         d = infermedica_api.Diagnosis(gender, age)
